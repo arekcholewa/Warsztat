@@ -1,8 +1,12 @@
 package sample;
 
 import databse.AutoService;
+import databse.PartCategoryService;
 import databse.PartService;
+import databse.WarsztatService;
 import entity.Auto;
+import entity.Part;
+import entity.PartCategory;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -18,8 +22,9 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
 
-       // new PartService().getAllParts();
-        new AutoService().addAuto( new Auto(1L, 1L, "fiat", "punto", "WW2342"));
+
+        System.out.println( new WarsztatService().getAllWarsztat().get(0).getMiejscowosc());
+
     }
 
 

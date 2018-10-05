@@ -101,4 +101,8 @@ public class Part {
     public void setBieznik(String bieznik) {
         this.bieznik = bieznik;
     }
+
+    public Long getWarsztatId() {
+        return warsztatId;
+    }
 }

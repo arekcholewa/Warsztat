@@ -98,4 +98,19 @@ public class AutoService {
         }
 
     }
+    public void deleteAuto(Auto auto){
+        try {
+            Class.forName(DatabseConnection.getDBDRIVER()).newInstance();
+            connection = DriverManager.getConnection(DatabseConnection.getURL(),
+                    DatabseConnection.getUSER(),
+                    DatabseConnection.getPASSWORD());
+            statement = connection.createStatement();
+
+            String deleteQuery = String.format("Delete FROM Auto Where autoId = %d", auto.getId());
+            statement.execute(deleteQuery);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
