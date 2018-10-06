@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="239.0" prefWidth="442.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Interface">
+    <children>
+        <ComboBox fx:id="cSelectItemToSearch" layoutX="35.0" layoutY="107.0" onAction="#selectItem" prefWidth="150.0" promptText="select item" />
+        <ComboBox fx:id="cSelectLocationToSearch" layoutX="221.0" layoutY="107.0" prefWidth="150.0" promptText="select location" />
+    </children>
+</AnchorPane>

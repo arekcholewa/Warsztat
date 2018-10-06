@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="333.0" prefWidth="468.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Interface">
+   <children>
+      <TextField layoutX="160.0" layoutY="116.0" />
+      <TextField layoutX="160.0" layoutY="174.0" />
+      <TextField layoutX="160.0" layoutY="226.0" />
+      <ComboBox layoutX="159.0" layoutY="277.0" prefWidth="150.0" />
+      <Label layoutX="26.0" layoutY="120.0" prefHeight="17.0" prefWidth="89.0" text="Podaj markę" />
+      <Label layoutX="31.0" layoutY="178.0" text="Podaj model" />
+      <Label layoutX="26.0" layoutY="230.0" prefHeight="17.0" prefWidth="89.0" text="Podaj tablice" />
+      <Label layoutX="14.0" layoutY="281.0" text="Wybierz lokalizacje" />
+   </children>
+</AnchorPane>
