@@ -113,4 +113,59 @@ public class AutoService {
             e.printStackTrace();
         }
     }
+
+    public List<Auto> getAutoByMarka(String marka){
+        List<Auto> cars = new ArrayList<>();
+        try {
+            Class.forName(DatabseConnection.getDBDRIVER()).newInstance();
+            connection = DriverManager.getConnection(DatabseConnection.getURL(),
+                    DatabseConnection.getUSER(),
+                    DatabseConnection.getPASSWORD());
+            statement = connection.createStatement();
+            String query = String.format("Select * From Auto Where auto_marka = '%s' ",marka);
+            ResultSet result = statement.executeQuery(query);
+
+            while (result.next()){
+                cars.add( new Auto(result.getLong(ID),
+                        result.getLong(WARSZTAT_ID),
+                        result.getString(MARKA),
+                        result.getString(MODEL),
+                        result.getString(REJESTRACJA)));
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+        return cars;
+    }
+
+    public List<Auto> getAutoByModel(String model){
+        List<Auto> cars = new ArrayList<>();
+        try {
+            Class.forName(DatabseConnection.getDBDRIVER()).newInstance();
+            connection = DriverManager.getConnection(DatabseConnection.getURL(),
+                    DatabseConnection.getUSER(),
+                    DatabseConnection.getPASSWORD());
+            statement = connection.createStatement();
+            String query = String.format("Select * From Auto Where auto_model = '%s' ", model);
+            ResultSet result = statement.executeQuery(query);
+
+            while (result.next()){
+                cars.add( new Auto(result.getLong(ID),
+                        result.getLong(WARSZTAT_ID),
+                        result.getString(MARKA),
+                        result.getString(MODEL),
+                        result.getString(REJESTRACJA)));
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return cars;
+    }
 }

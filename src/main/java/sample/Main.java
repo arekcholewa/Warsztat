@@ -48,7 +48,7 @@ public class Main extends Application {
         System.out.println(primaryStage.hasProperties());
 
         // new PartService().getAllParts();
-        // new AutoService().getAllCars();
+       // System.out.println(new AutoService().getAutoByModel("astra").get(0).getNrRej());
     }
 
     @Override

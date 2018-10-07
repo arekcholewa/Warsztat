@@ -18,8 +18,6 @@
       <Button fx:id="bCancel" layoutX="58.0" layoutY="170.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="25.0" prefWidth="83.0" text="Cancel" />
       <Button fx:id="bLogin" layoutX="190.0" layoutY="170.0" mnemonicParsing="false" onAction="#loginToDatabase" prefHeight="25.0" prefWidth="117.0" text="Login" />
       <CheckBox fx:id="checkDefault" layoutX="157.0" layoutY="138.0" mnemonicParsing="false" onAction="#isDefaultSelected" prefHeight="17.0" prefWidth="150.0" text="Use default parameters" />
-      <Button fx:id="bAdd" disable="true" layoutX="58.0" layoutY="227.0" mnemonicParsing="false" onAction="#addToDatabase" prefHeight="25.0" prefWidth="70.0" text="Add" />
-      <Button fx:id="bRemove" disable="true" layoutX="148.0" layoutY="227.0" mnemonicParsing="false" onAction="#removeFromDatabase" prefHeight="25.0" prefWidth="70.0" text="Remove" />
-      <Button fx:id="bSearch" disable="true" layoutX="238.0" layoutY="227.0" mnemonicParsing="false" onAction="#searchInDatabase" prefHeight="25.0" prefWidth="70.0" text="Search" />
+
    </children>
 </AnchorPane>

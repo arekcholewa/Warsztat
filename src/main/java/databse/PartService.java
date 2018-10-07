@@ -133,4 +133,70 @@ public class PartService {
             e.printStackTrace();
         }
     }
+
+    public List<Part> getPartsByProducent(String producent){
+        List<Part> parts = new ArrayList();
+        try {
+            Class.forName(DatabseConnection.getDBDRIVER()).newInstance();
+            connection = DriverManager.getConnection(DatabseConnection.getURL(),
+                    DatabseConnection.getUSER(),
+                    DatabseConnection.getPASSWORD());
+            statement = connection.createStatement();
+
+            String query = String.format("Select * From Part Where producent = %s",producent );
+            ResultSet result = statement.executeQuery(query);
+
+            while (result.next()){
+                parts.add( new Part(result.getLong(PARTID),
+                        result.getLong(CAtEGORY_ID),
+                        result.getLong(WARSZATT_ID),
+                        result.getString(PRODECENT),
+                        result.getString(MODEL),
+                        result.getInt(PÓLKA),
+                        result.getInt(MIEJSCE),
+                        result.getInt(RZAD),
+                        result.getString(DOT),
+                        result.getString(BIEZNIK)));
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return parts;
+    }
+
+    public List<Part> getPartsByModel(String model){
+        List<Part> parts = new ArrayList();
+        try {
+            Class.forName(DatabseConnection.getDBDRIVER()).newInstance();
+            connection = DriverManager.getConnection(DatabseConnection.getURL(),
+                    DatabseConnection.getUSER(),
+                    DatabseConnection.getPASSWORD());
+            statement = connection.createStatement();
+
+            String query = String.format("Select * From Part Where model = %s", model );
+            ResultSet result = statement.executeQuery(query);
+
+            while (result.next()){
+                parts.add( new Part(result.getLong(PARTID),
+                        result.getLong(CAtEGORY_ID),
+                        result.getLong(WARSZATT_ID),
+                        result.getString(PRODECENT),
+                        result.getString(MODEL),
+                        result.getInt(PÓLKA),
+                        result.getInt(MIEJSCE),
+                        result.getInt(RZAD),
+                        result.getString(DOT),
+                        result.getString(BIEZNIK)));
+            }
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return parts;
+    }
 }
